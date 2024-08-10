@@ -11,23 +11,25 @@
         android:id="@+id/circle"
         android:layout_width="55dp"
         android:layout_height="55dp"
-        android:layout_marginEnd="53dp"
+        android:layout_marginEnd="73dp"
         android:background="@drawable/round"
-        android:elevation="8dp"
+        android:elevation="3dp"
+        android:hapticFeedbackEnabled="true"
         android:padding="8dp"
         android:scaleType="fitCenter"
         android:src="@drawable/circle"
         android:tint="#969696"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/button" />
 
     <ImageButton
         android:id="@+id/triangle"
         android:layout_width="55dp"
         android:layout_height="55dp"
         android:background="@drawable/round"
-        android:elevation="8dp"
+        android:elevation="3dp"
+        android:hapticFeedbackEnabled="true"
         android:padding="11dp"
         android:scaleType="fitCenter"
         android:src="@drawable/triangle"
@@ -40,7 +42,8 @@
         android:layout_width="55dp"
         android:layout_height="55dp"
         android:background="@drawable/round"
-        android:elevation="8dp"
+        android:elevation="3dp"
+        android:hapticFeedbackEnabled="true"
         android:padding="8dp"
         android:scaleType="fitCenter"
         android:src="@drawable/square"
@@ -53,7 +56,8 @@
         android:layout_width="55dp"
         android:layout_height="55dp"
         android:background="@drawable/round"
-        android:elevation="8dp"
+        android:elevation="3dp"
+        android:hapticFeedbackEnabled="true"
         android:padding="11dp"
         android:scaleType="fitCenter"
         android:src="@drawable/x_button"
@@ -70,6 +74,7 @@
         android:scaleType="fitCenter"
         android:src="@drawable/arrow_up"
         android:tint="#969696"
+        android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@+id/left_arrow"
         app:layout_constraintStart_toEndOf="@+id/left_arrow" />
 
@@ -83,6 +88,7 @@
         android:scaleType="fitCenter"
         android:src="@drawable/left_arrow"
         android:tint="#969696"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -96,6 +102,7 @@
         android:scaleType="fitCenter"
         android:src="@drawable/arrow_right"
         android:tint="#969696"
+        android:visibility="gone"
         app:layout_constraintStart_toEndOf="@+id/up_arrow"
         app:layout_constraintTop_toTopOf="@+id/left_arrow" />
 
@@ -108,6 +115,116 @@
         android:scaleType="fitCenter"
         android:src="@drawable/arrow_down"
         android:tint="#969696"
-        app:layout_constraintStart_toEndOf="@+id/left_arrow"
-        app:layout_constraintTop_toBottomOf="@+id/left_arrow" />
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/button3"
+        android:layout_width="153dp"
+        android:layout_height="153dp"
+        android:layout_marginStart="80dp"
+        android:background="@drawable/round3"
+        android:elevation="3dp"
+        app:layout_constraintBottom_toBottomOf="@+id/button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/button" />
+
+    <com.momid.momidcontroller.Screen
+        android:id="@+id/joystick_screen"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="-83dp"
+        android:layout_marginEnd="-83dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:longClickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/button3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/button3" />
+
+    <ImageButton
+        android:id="@+id/button"
+        android:layout_width="83dp"
+        android:layout_height="83dp"
+        android:layout_marginBottom="83dp"
+        android:background="@drawable/round"
+        android:backgroundTint="@android:color/background_light"
+        android:clickable="true"
+        android:elevation="8dp"
+        android:focusable="true"
+        android:longClickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/button3"
+        app:layout_constraintStart_toStartOf="@+id/button3" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="33dp"
+        android:layout_marginBottom="-18dp"
+        android:background="@drawable/round8"
+        android:elevation="3dp"
+        android:hapticFeedbackEnabled="true"
+        android:text="R2"
+        android:textColor="@android:color/holo_blue_dark"
+        app:layout_constraintBottom_toTopOf="@+id/triangle"
+        app:layout_constraintEnd_toStartOf="@+id/triangle" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="-30dp"
+        android:background="@drawable/round8"
+        android:elevation="3dp"
+        android:hapticFeedbackEnabled="true"
+        android:text="R1"
+        android:textColor="@android:color/holo_blue_dark"
+        app:layout_constraintEnd_toStartOf="@+id/button4"
+        app:layout_constraintTop_toBottomOf="@+id/button4" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="-30dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/round8"
+        android:elevation="3dp"
+        android:hapticFeedbackEnabled="true"
+        android:text="L1"
+        android:textColor="@android:color/holo_blue_dark"
+        app:layout_constraintBottom_toTopOf="@+id/button7"
+        app:layout_constraintEnd_toStartOf="@+id/button7" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-18dp"
+        android:layout_marginEnd="33dp"
+        android:background="@drawable/round8"
+        android:elevation="3dp"
+        android:hapticFeedbackEnabled="true"
+        android:text="L2"
+        android:textColor="@android:color/holo_blue_dark"
+        app:layout_constraintEnd_toStartOf="@+id/cross"
+        app:layout_constraintTop_toBottomOf="@+id/cross" />
+
+    <com.momid.momidcontroller.Screen
+        android:id="@+id/screen"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:hapticFeedbackEnabled="true"
+        android:longClickable="true"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/button5"
+        app:layout_constraintTop_toTopOf="parent"></com.momid.momidcontroller.Screen>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
